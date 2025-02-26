@@ -1,6 +1,6 @@
 openai==0.28
 tiktoken 
-chromadb==0.4.4
+chromadb==0.3.22
 langchain==0.0.249
 flask
 GitPython
