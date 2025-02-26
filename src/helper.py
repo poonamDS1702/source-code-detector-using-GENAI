@@ -48,3 +48,11 @@ def load_embedding():
     embeddings=OpenAIEmbeddings(disallowed_special=())
     return embeddings
 
+
+from langchain.embeddings import HuggingFaceEmbeddings
+
+# Loading embeddings model using Hugging Face
+def load_embedding():
+    embeddings = HuggingFaceEmbeddings(model_name="mistralai/Mistral-7B-Instruct")
+    return embeddings
+
