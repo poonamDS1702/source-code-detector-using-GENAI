@@ -8,6 +8,11 @@ from flask import Flask, render_template, jsonify, request
 from langchain.memory import ConversationSummaryMemory
 from langchain.chains import ConversationalRetrievalChain
 
+import subprocess
+
+subprocess.run(["pip", "install", "sentence-transformers"], check=True)
+subprocess.run(["pip", "install", "chromadb"], check=True)
+
 
 app = Flask(__name__)
 
@@ -36,7 +41,7 @@ os.environ["HUGGINGFACE_API_KEY"] = HUGGINGFACE_API_KEY
 
 # Load a Hugging Face chat model
 llm = HuggingFaceHub(
-    repo_id="mistralai/Mistral-7B-Instruct",  # Replace with your preferred HF model
+    repo_id="openai-community/gpt2", huggingfacehub_api_token=HUGGINGFACE_API_KEY,# Replace with your preferred HF model
     model_kwargs={"temperature": 0.7, "max_length": 512}
 )
 

@@ -7,6 +7,8 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
 
 
+
+
 #clone any github repositories 
 def repo_ingestion(repo_url):
     os.makedirs("repo", exist_ok=True)
@@ -43,16 +45,10 @@ def text_splitter(documents):
 
 
 
-#loading embeddings model
-def load_embedding():
-    embeddings=OpenAIEmbeddings(disallowed_special=())
-    return embeddings
-
-
 from langchain.embeddings import HuggingFaceEmbeddings
 
 # Loading embeddings model using Hugging Face
 def load_embedding():
-    embeddings = HuggingFaceEmbeddings(model_name="mistralai/Mistral-7B-Instruct")
+    embeddings = HuggingFaceEmbeddings(model_name="openai-community/gpt2")
     return embeddings
 
