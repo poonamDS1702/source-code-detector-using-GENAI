@@ -49,6 +49,6 @@ from langchain.embeddings import HuggingFaceEmbeddings
 
 # Loading embeddings model using Hugging Face
 def load_embedding():
-    embeddings = HuggingFaceEmbeddings(model_name="openai-community/gpt2")
+    embeddings = HuggingFaceEmbeddings(model_name="gpt2")
     return embeddings
 
