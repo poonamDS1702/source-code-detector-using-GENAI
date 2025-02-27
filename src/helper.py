@@ -48,7 +48,13 @@ def text_splitter(documents):
 from langchain.embeddings import HuggingFaceEmbeddings
 
 # Loading embeddings model using Hugging Face
-def load_embedding():
+"""def load_embedding():
     embeddings = HuggingFaceEmbeddings(model_name="gpt2")
     return embeddings
+    """
 
+
+from langchain.embeddings import HuggingFaceEmbeddings
+
+def load_embedding():
+    return HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")

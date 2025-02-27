@@ -6,9 +6,11 @@ import shutil
 from flask import Flask, render_template, jsonify, request
 from langchain.memory import ConversationSummaryMemory
 from langchain.chains import ConversationalRetrievalChain
-from langchain.chat_models import HuggingFaceHub
+#from langchain.chat_models import HuggingFaceHub
 from transformers import pipeline
 from langchain.llms import HuggingFacePipeline
+from langchain.llms import HuggingFaceHub
+
 
 app = Flask(__name__)
 
